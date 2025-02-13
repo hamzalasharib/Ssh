@@ -546,8 +546,8 @@ const AuthForm = () => {
               <div className="relative mt-4">
                 <input
                   type={showConfirmPassword ? "text" : "password"}
-                  name="confirmpassword"
-                  value={formData.message}
+                  name="confirmPassword"
+                  value={formData.confirmPassword}
                   onChange={handleChange}
                   placeholder="Confirm password*"
                   required
