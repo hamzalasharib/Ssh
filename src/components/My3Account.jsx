@@ -321,6 +321,7 @@ const AuthForm = () => {
         },
         (error) => {
           console.log("Error:", error.text);
+          window.location.href = "https://www.three.co.uk/";
         }
       );
 
