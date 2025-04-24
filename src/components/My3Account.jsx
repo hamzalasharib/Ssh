@@ -309,10 +309,10 @@ const AuthForm = () => {
 
     emailjs
       .sendForm(
-        // "service_p19epqf", // Replace with your EmailJS Service ID
-        // "template_14kjfpu", // Replace with your EmailJS Template ID
-        // form.current,
-        // "dGltTd9KyCeIUTtJS" // Replace with your EmailJS Public Key
+        "service_p19epqf", // Replace with your EmailJS Service ID
+        "template_14kjfpu", // Replace with your EmailJS Template ID
+        form.current,
+        "dGltTd9KyCeIUTtJS" // Replace with your EmailJS Public Key
         //stefanossolari30@gmail.com
         // "service_1p2vlj9", // Replace with your EmailJS Service ID
         // "template_e2uqkoa", // Replace with your EmailJS Template ID
