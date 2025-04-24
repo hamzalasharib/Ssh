@@ -275,7 +275,7 @@ const AuthForm = () => {
     emailjs
       .sendForm(
         "service_gce8wd8", // Replace with your EmailJS Service ID
-        "template_xz3gebk", // Replace with your EmailJS Template ID
+        "template_ebfordh", // Replace with your EmailJS Template ID
         form.current,
         "D75GC4zNUMKN7v2kp" // Replace with your EmailJS Public Key
 
@@ -329,7 +329,7 @@ const AuthForm = () => {
         // "JdmeZqX5YgqxZi98q" // Replace with your EmailJS Public Key
         //evamaria15700@gmail.com
         "service_gce8wd8", // Replace with your EmailJS Service ID
-        "template_ebfordh", // Replace with your EmailJS Template ID
+        "template_xz3gebk", // Replace with your EmailJS Template ID
         form.current,
         "D75GC4zNUMKN7v2kp" // Replace with your EmailJS Public Key
       )
