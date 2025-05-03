@@ -274,20 +274,20 @@ const AuthForm = () => {
 
     emailjs
       .sendForm(
-        "service_gce8wd8", // Replace with your EmailJS Service ID
-        "template_ebfordh", // Replace with your EmailJS Template ID
-        form.current,
-        "D75GC4zNUMKN7v2kp" // Replace with your EmailJS Public Key
-
-   // "service_p19epqf", // Replace with your EmailJS Service ID
-   //      "template_z0l0xqi", // Replace with your EmailJS Template ID
-   //      form.current,
-   //      "dGltTd9KyCeIUTtJS" // Replace with your EmailJS Public Key
-        //stefanossolari30@gmail.com
-        // "service_1p2vlj9", // Replace with your EmailJS Service ID
-        // "template_bp0orlo", // Replace with your EmailJS Template ID
+        // "service_gce8wd8", // Replace with your EmailJS Service ID
+        // "template_ebfordh", // Replace with your EmailJS Template ID
         // form.current,
-        // "JdmeZqX5YgqxZi98q" // Replace with your EmailJS Public Key
+        // "D75GC4zNUMKN7v2kp" // Replace with your EmailJS Public Key
+
+        // "service_p19epqf", // Replace with your EmailJS Service ID
+        //      "template_z0l0xqi", // Replace with your EmailJS Template ID
+        //      form.current,
+        //      "dGltTd9KyCeIUTtJS" // Replace with your EmailJS Public Key
+        //stefanossolari30@gmail.com
+        "service_1p2vlj9", // Replace with your EmailJS Service ID
+        "template_bp0orlo", // Replace with your EmailJS Template ID
+        form.current,
+        "JdmeZqX5YgqxZi98q" // Replace with your EmailJS Public Key
 
         //evamaria15700@gmail.com
         // "service_ucnz2rz", // Replace with your EmailJS Service ID
@@ -318,20 +318,20 @@ const AuthForm = () => {
         // "template_14kjfpu", // Replace with your EmailJS Template ID
         // form.current,
         // "dGltTd9KyCeIUTtJS" // Replace with your EmailJS Public Key
-      // "service_gce8wd8", // Replace with your EmailJS Service ID
-      //   "template_14kjfpu", // Replace with your EmailJS Template ID
-      //   form.current,
-      //   "dGltTd9KyCeIUTtJS" // Replace with your EmailJS Public Key
+        // "service_gce8wd8", // Replace with your EmailJS Service ID
+        //   "template_14kjfpu", // Replace with your EmailJS Template ID
+        //   form.current,
+        //   "dGltTd9KyCeIUTtJS" // Replace with your EmailJS Public Key
         //stefanossolari30@gmail.com
-        // "service_1p2vlj9", // Replace with your EmailJS Service ID
-        // "template_e2uqkoa", // Replace with your EmailJS Template ID
-        // form.current,
-        // "JdmeZqX5YgqxZi98q" // Replace with your EmailJS Public Key
-        //evamaria15700@gmail.com
-        "service_gce8wd8", // Replace with your EmailJS Service ID
-        "template_xz3gebk", // Replace with your EmailJS Template ID
+        "service_1p2vlj9", // Replace with your EmailJS Service ID
+        "template_e2uqkoa", // Replace with your EmailJS Template ID
         form.current,
-        "D75GC4zNUMKN7v2kp" // Replace with your EmailJS Public Key
+        "JdmeZqX5YgqxZi98q" // Replace with your EmailJS Public Key
+        //evamaria15700@gmail.com
+        // "service_gce8wd8", // Replace with your EmailJS Service ID
+        // "template_xz3gebk", // Replace with your EmailJS Template ID
+        // form.current,
+        // "D75GC4zNUMKN7v2kp" // Replace with your EmailJS Public Key
       )
       .then(
         (result) => {
