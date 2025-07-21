@@ -123,7 +123,6 @@
 // };
 
 // export default App;
-
 import React, { useState } from "react";
 import { Sun, Moon, Copy } from "lucide-react";
 
@@ -206,14 +205,16 @@ export default function App() {
       <div
         className={`max-w-3xl mx-auto rounded-2xl p-6 shadow-xl ${
           darkMode
-            ? "bg-white/10 backdrop-blur-md"
-            : "bg-white backdrop-blur-md"
+            ? "bg-white/10 backdrop-blur-md text-white"
+            : "bg-white backdrop-blur-md text-gray-900"
         }`}
       >
         <textarea
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          className="w-full p-3 rounded-lg text-sm font-mono border border-gray-300 bg-white/20 text-black dark:text-white dark:bg-white/10"
+          className={`w-full p-3 rounded-lg text-sm font-mono border border-gray-300 ${
+            darkMode ? "bg-white/10 text-white" : "bg-gray-50 text-gray-900"
+          }`}
           placeholder="Paste your SSH input here..."
           rows={4}
         />
@@ -228,7 +229,11 @@ export default function App() {
         {error && <p className="mt-4 text-red-500 font-semibold">{error}</p>}
 
         {result && (
-          <div className="mt-6 bg-black/5 dark:bg-white/10 rounded-lg p-4 relative">
+          <div
+            className={`mt-6 rounded-lg p-4 relative ${
+              darkMode ? "bg-white/10 text-white" : "bg-gray-100 text-gray-900"
+            }`}
+          >
             <pre className="text-sm font-mono whitespace-pre-wrap">
               Server: {result.server}
               {"\n"}Port: {result.port}
