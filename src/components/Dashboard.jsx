@@ -213,7 +213,7 @@ export default function App() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           className={`w-full p-3 rounded-lg text-sm font-mono border border-gray-300 ${
-            darkMode ? "bg-white/10 text-white" : "bg-gray-50 text-gray-900"
+            darkMode ? "bg-white/10 text-white" : "bg-gray-100 text-gray-900"
           }`}
           placeholder="Paste your SSH input here..."
           rows={4}
