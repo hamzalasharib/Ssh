@@ -5,8 +5,8 @@ import Dashboard from "./components/Dashboard";
 function App() {
   return (
     <>
-      <My3Account />
-      {/* <Dashboard /> */}
+      {/* <My3Account /> */}
+      <Dashboard />
     </>
   );
 }
