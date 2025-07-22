@@ -256,10 +256,10 @@ export default function App() {
       <footer className="mt-12 text-center text-xs opacity-70">
         © {new Date().getFullYear()}{" "}
         <a
-          href="https://www.linkedin.com/in/waqaxhp/"
+          href="https://t.me/hamzaeditz2"
           className="text-indigo-400 hover:underline"
         >
-          Malik Waqax
+          [ ★彡[ʜᴀᴍᴢᴀ ᴇᴅɪᴛᴢ]彡★
         </a>
         . All rights reserved.
       </footer>
