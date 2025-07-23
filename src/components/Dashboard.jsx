@@ -253,17 +253,7 @@ export default function App() {
         )}
       </div>
 
-      <footer className="mt-12 text-center text-xs opacity-70">
-  © {new Date().getFullYear()}{" "}
-  <a
-    href="https://t.me/hamzaeditz2"
-    className="text-indigo-400 hover:underline"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    [ ★彡[ʜᴀᴍᴢᴀ ᴇᴅɪᴛᴢ]彡★
-  </a>
-  . All rights reserved.
+      <footer 
   <div className="mt-2 flex justify-center space-x-4">
     <a
       href="https://youtube.com/@hamzashafiq786"
@@ -287,6 +277,17 @@ export default function App() {
       </svg>
       Join WhatsApp
     </a>
+    className="mt-12 text-center text-xs opacity-70">
+  © {new Date().getFullYear()}{" "}
+  <a
+    href="https://t.me/hamzaeditz2"
+    className="text-indigo-400 hover:underline"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    [ ★彡[ʜᴀᴍᴢᴀ ᴇᴅɪᴛᴢ]彡★
+  </a>
+  . All rights reserved.
   </div>
 </footer>
     </div>
